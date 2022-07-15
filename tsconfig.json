@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    // https://www.tslang.cn/docs/handbook/compiler-options.html
+    "outDir": "build/dist",
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "sourceMap": true, // 生成相应的.map文件
+    "baseUrl": ".",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用
+    "noImplicitReturns": true, // 	不是函数的所有返回路径都有返回值时报错
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true, // 若有未使用的局部变量则抛错
+    "allowJs": true, // 允许编译JavaScript文件
+    "skipLibCheck": true, // 忽略所有的声明文件(*.d.ts)的类型检查
+    "experimentalDecorators": true, // 启用实验性的es装饰器
+    "strict": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@@/*": ["./src/.umi/*"],
+      "config/*": ["./config/*"]
+    }
+  },
+  "exclude": ["node_modules", "build", "dist", "src/.umi-production/*", "src/.umi/*", "jest"]
+}

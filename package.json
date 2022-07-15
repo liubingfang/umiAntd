@@ -1,0 +1,57 @@
+{
+  "name": "umi-antd",
+  "version": "1.0.0",
+  "private": true,
+  "description": "基于antd pro改版的中台系统脚手架",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liubingfang/umiAntd.git"
+  },
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "start:dev": "cross-env UMI_ENV=dev umi dev",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "tsc": "tsc"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-layout": "^6.5.0",
+    "classnames": "^2.2.6",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "react-helmet-async": "^1.0.4",
+    "umi": "^3.5.26",
+    "umi-request": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/classnames": "^2.2.7",
+    "@umijs/fabric": "^2.12.2",
+    "@umijs/plugin-blocks": "^2.0.5",
+    "@umijs/preset-ant-design-pro": "^1.2.0",
+    "@umijs/preset-react": "1.x",
+    "@umijs/preset-ui": "^2.0.9",
+    "@umijs/test": "^3.5.26",
+    "cross-env": "^7.0.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  }
+}

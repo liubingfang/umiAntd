@@ -1,0 +1,34 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  width: 368px;
+  margin: 100px auto 0 auto;
+  padding: 12px 24px 24px 24px;
+  background: #fff;
+  border-radius: 8px;
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+
+  .title {
+    position: relative;
+    top: 2px;
+    padding-bottom: 12px;
+    color: #333;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  .submitBtn {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .qrcodeBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .errorMsg {
+    margin-bottom: 18px;
+  }
+}
