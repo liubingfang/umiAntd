@@ -40,6 +40,8 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
 
     const isLogin = !!currentUser?.userInfo?.id;
 
+    console.log('currentUser?.userInfo?.id :>> ', currentUser?.userInfo?.id);
+
     if ((!isLogin && loading) || !isReady) {
       return <PageLoading />;
     }

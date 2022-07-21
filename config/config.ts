@@ -20,9 +20,9 @@ export default defineConfig({
     baseNavigator: true,
   },
   // 提速方法，umi必须为3.5版本及以上
-  // mfsu: {},
-  // webpack5: {},
-  // fastRefresh: {},
+  mfsu: {},
+  webpack5: {},
+  fastRefresh: {},
   // 打包文件结构变化，优化用户体验
   dynamicImport: {
     loading: '@/components/PageLoading/index', // 防止切换页面出现卡顿

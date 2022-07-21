@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'umi';
 import Avatar from './AvatarDropdown';
+import HeaderSearch from './HeaderSearch';
 
 import type { Settings as ProSettings } from '@ant-design/pro-layout';
 import type { ConnectProps } from 'umi';
@@ -23,6 +24,7 @@ const GlobalHeaderRight: React.FC<GlobalHeaderRightPropsType> = (props) => {
 
   return (
     <div className={rootClassName}>
+      <HeaderSearch />
       <Avatar />
     </div>
   );

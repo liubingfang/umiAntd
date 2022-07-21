@@ -8,7 +8,9 @@ export interface GlobalModelStateType {
 export interface GlobalModelType {
   namespace: 'global';
   state: GlobalModelStateType;
-  effects: {};
+  effects: {
+    fetchNotices: Effect;
+  };
   reducers: {
     changeLayoutCollapsed: Reducer<GlobalModelStateType>;
   };
@@ -20,12 +22,13 @@ const GlobalModel: GlobalModelType = {
   state: {
     collapsed: false,
   },
-  effects: {},
+  effects: {
+    *fetchNotices({ payload }, { call, put }) {
+      // const result = yield call("")
+    },
+  },
   reducers: {
-    changeLayoutCollapsed(
-      state = { collapsed: false },
-      { payload },
-    ): GlobalModelStateType {
+    changeLayoutCollapsed(state = { collapsed: false }, { payload }): GlobalModelStateType {
       return {
         ...state,
         collapsed: payload,

@@ -1,9 +1,21 @@
 import React from 'react';
+import { Dropdown } from 'antd';
+import classNames from 'classnames';
+import styles from './index.less';
 
-export interface HeaderDropdownPropsType {}
+declare type OverlayFunc = () => React.ReactNode;
 
-const HeaderDropdown: React.FC<HeaderDropdownPropsType> = ({}) => {
-  return <></>;
+export interface HeaderDropdownPropsType {
+  overlayClassName?: string;
+  overlay: React.ReactNode | OverlayFunc | any;
+  placement?: 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topCenter' | 'topRight' | 'bottomCenter';
+}
+
+const HeaderDropdown: React.FC<HeaderDropdownPropsType> = ({
+  overlayClassName: cls,
+  ...restProps
+}) => {
+  return <Dropdown overlayClassName={classNames(styles.container, cls)} {...restProps} />;
 };
 
 export default HeaderDropdown;

@@ -9,9 +9,9 @@ export type DefaultSettings = ProSettings & {
 };
 
 const defaultSettings = {
-  navTheme: 'light',
-  primaryColor: '#1890ff',
-  layout: 'mix',
+  navTheme: 'dark',
+  primaryColor: 'rgb(135, 208, 104)',
+  layout: 'top',
   contentWidth: 'Fluid',
   fixedHeader: false,
   fixSiderbar: true,

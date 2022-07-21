@@ -31,7 +31,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@ant-design/pro-layout": "^6.5.0",
-    "classnames": "^2.2.6",
+    "classnames": "^2.3.1",
     "react": "17.x",
     "react-dom": "17.x",
     "react-helmet-async": "^1.0.4",
@@ -39,9 +39,9 @@
     "umi-request": "^1.4.0"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.7",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "@types/classnames": "^2.2.7",
     "@umijs/fabric": "^2.12.2",
     "@umijs/plugin-blocks": "^2.0.5",
     "@umijs/preset-ant-design-pro": "^1.2.0",
